@@ -4,34 +4,47 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
+  <title>Maze Game</title>
   <link href="maze.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-  <section>
+    <div id="main-menu" class="menu-overlay">
+        
+        <div class="menu-content">
+            <label for="colorWheel">Pick a color:</label>
+            <input type="color" id="colorWheel" name="colorWheel" value="#ff0000">
+            <h1 class="menu-title">Maze Escape</h1>
+            <p class="menu-subtitle">Find the exit before time runs out!</p>
+            <button id="start-btn" class="menu-button">START GAME</button>
+            
+        </div>
+    </div>
 
-  <div id="wrapper">
-      <div id="maze">
-    <h1 id="heading" class="game-heading">Maze Game</h1>
-       <b><div id="c" style="color:white" class="centered-text"></div></b>
-       <canvas id="canvas" width="523" height="523" class="centered"></canvas>
-          <div style="color:white" id="timerel">Time Left: 00:30</div>
-      </div>
-      <div id="myModal" class="modal">
-          <div class="modal-content">
-              <div class="modal-header">
-                  <span class="close">&times;</span>
-                  <h2 class="gamehead"></h2>
-              </div>
-              <div class="modal-footer">
-                <h2 id="demo" class="modal-button">Play Again?</h2>
+    <section id="game-container" style="display: none;"> <div id="wrapper">
+          <div id="maze">
+            <h1 id="heading" class="game-heading">Maze Game</h1>
+            <b><div id="c" style="color:white" class="centered-text"></div></b>
+            <canvas id="canvas" width="523" height="523" class="centered"></canvas>
+            <div style="color:white" id="timerel">Time Left: 00:30</div>
+
+            <div id="joystick-container">
+                <div id="joystick-knob"></div>
+            </div>
+          </div>
+          <div id="myModal" class="modal">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <span class="close">&times;</span>
+                      <h2 class="gamehead"></h2>
+                  </div>
+                  <div class="modal-footer">
+                    <h2 id="demo" class="modal-button">Play Again?</h2>
+                  </div>
               </div>
           </div>
       </div>
-  </div>
-  </section>
-  
+    </section>
   <script src="script.js"></script>
 </body>
 

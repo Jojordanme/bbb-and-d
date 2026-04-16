@@ -15,7 +15,79 @@ body {
   background-color:#202683;
 
 }
+/* Main Menu Overlay */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #202683;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
 
+.menu-content {
+  text-align: center;
+  color: white;
+}
+
+.menu-title {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.menu-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0.8;
+}
+
+.menu-button {
+  background-color: #ee44c1;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.menu-button:hover {
+  background-color: #8b6cf9;
+  transform: scale(1.1);
+}
+/* Joystick Container (The outer circle) */
+#joystick-container {
+    width: 120px;
+    height: 120px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    position: relative;
+    margin: 20px auto; /* Centers the joystick below the canvas */
+    touch-action: none; /* Prevents the screen from scrolling when using the joystick */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Joystick Knob (The part you drag) */
+#joystick-knob {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none; /* Allows the touch event to pass through to the container */
+    transition: transform 0.05s ease-out; /* Smooth snapping */
+}
 .centered-text {
   text-align: center;
   margin-left: auto;
